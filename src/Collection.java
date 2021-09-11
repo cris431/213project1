@@ -4,7 +4,15 @@ import java.util.Arrays
 public class Collection {
 	private Album[] albums; //how to initialize it to size 4 if we can't change instance variables?
 	private int numAlbums;
-	private int find(Album album) {}
+	private int find(Album album) {
+		for (int i = 0; i< numAlbums; i++) {
+			if (album.equals(albums[i])) {
+				return i;
+			} else {
+				return -1;
+			}
+		}
+	}
 	private void grow() {
 		Album[] grownCollection = new Album[albums.length + 4]
 			
